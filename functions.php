@@ -116,7 +116,7 @@ function travelbootstrap_scripts() {
 
 	wp_enqueue_style( 'travelbootstrap-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'travelbootstrap-navigation', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.4', true );
+	wp_enqueue_script( 'travelbootstrap-navigation', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.4', true );
 
 	wp_enqueue_script( 'travelbootstrap-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
