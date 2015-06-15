@@ -7,28 +7,28 @@
  * @package travelbootstrap
  */
 
-if ( ! function_exists( 'the_posts_navigation' ) ) :
+if ( ! function_exists( 'the_post_navigation' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  *
  * @todo Remove this function when WordPress 4.3 is released.
  */
-function the_posts_navigation() {
+function the_post_navigation() {
 	// Don't print empty markup if there's only one page.
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 		return;
 	}
 	?>
 	<nav class="navigation posts-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'travelbootstrap' ); ?></h2>
-		<div class="nav-links">
+		<h2 class="sr-only"><?php esc_html_e( 'Posts navigation', 'travelbootstrap' ); ?></h2>
+		<ul class="pager">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( esc_html__( 'Older posts', 'travelbootstrap' ) ); ?></div>
+			<li class="previous"><?php next_posts_link( esc_html__( 'Older posts', 'travelbootstrap' ) ); ?></li>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( esc_html__( 'Newer posts', 'travelbootstrap' ) ); ?></div>
+			<li class="next"><?php previous_posts_link( esc_html__( 'Newer posts', 'travelbootstrap' ) ); ?></li>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -53,7 +53,7 @@ function the_post_navigation() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'travelbootstrap' ); ?></h2>
+		<h2 class="sr-only"><?php esc_html_e( 'Post navigation', 'travelbootstrap' ); ?></h2>
 		<div class="nav-links">
 			<?php
 				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );

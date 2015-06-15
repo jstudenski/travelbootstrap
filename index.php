@@ -13,7 +13,10 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+<div class="container">
+	<div class="row">
+
+	<div id="primary" class="col-md-9 col-lg-9">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -33,7 +36,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<?php the_post_navigation(); ?>
 
 		<?php else : ?>
 

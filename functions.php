@@ -43,6 +43,7 @@ function travelbootstrap_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'travelbootstrap' ),
+		'footer-menu' => esc_html__( 'Footer Menu', 'travelbootstrap' ),
 	) );
 
 	/*
@@ -102,8 +103,8 @@ function travelbootstrap_widgets_init() {
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 }
 add_action( 'widgets_init', 'travelbootstrap_widgets_init' );
@@ -145,10 +146,6 @@ if ( !function_exists('ie_scripts')) {
 } // end if
 
 
-
-
-
-
 /**
  * Implement the Custom Header feature.
  */
@@ -173,3 +170,11 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load Bootstrap Menu.
+ */
+require get_template_directory() . '/inc/bootstrap-walker.php';
+
+
+

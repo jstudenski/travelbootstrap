@@ -23,18 +23,38 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+# Word Break
 # Alignments
 # Widgets
 # Content
     ## Posts and pages
 	## Asides
 	## Comments
+# Footer
 # Infinite scroll
 # Media
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
 
+
+/*--------------------------------------------------------------
+# Word Break - keep long words in their container
+--------------------------------------------------------------*/
+
+#primary, #secondary {
+-ms-word-break: break-all;
+
+     /* Be VERY careful with this, breaks normal words wh_erever */
+     word-break: break-all;
+
+     /* Non standard for webkit */
+     word-break: break-word;
+
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+        hyphens: auto;
+}
 
 /*--------------------------------------------------------------
 # Alignments
@@ -74,6 +94,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /* Search widget. */
 .widget_search .search-submit {
 	display: none;
+}
+
+/* Remove bullet points & padding */
+.widget ul {
+	list-style: none;
+	padding-left: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -128,6 +154,39 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .bypostauthor {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+Footer
+--------------------------------------------------------------*/
+#colophon {
+	margin-top: 50px;
+}
+
+#colophon .container {
+	border-top: 1px solid #ddd;
+	padding-top: 25px;
+}
+
+
+.footer-menu {
+	margin-left:0;
+	padding:0 0 30px 0;
+}
+
+.footer-menu li {
+	display:inline;
+	list-style-type:none;
+}
+
+.footer-menu li a {
+	border-left:1px solid #ddd;
+	padding: 0 8px;
+}
+
+.footer-menu > li:first-child > a {
+	border-left:none;
+	padding:0 8px 0 0;
 }
 
 /*--------------------------------------------------------------
