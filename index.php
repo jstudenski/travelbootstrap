@@ -16,15 +16,15 @@ get_header(); ?>
 <div class="container">
 	<div class="row">
 
-	<div id="primary" class="col-md-9 col-lg-9">
-		<main id="main" class="site-main" role="main">
+		<div id="primary" class="col-md-9 col-lg-9">
+			<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+				<?php if ( have_posts() ) : ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+					<?php /* Start the Loop */ ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
+						<?php
 
 					/*
 					 * Include the Post-Format-specific template for the content.
@@ -32,20 +32,20 @@ get_header(); ?>
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
 					get_template_part( 'template-parts/content', get_post_format() );
-				?>
+					?>
 
-			<?php endwhile; ?>
+				<?php endwhile; ?>
 
-			<?php the_post_navigation(); ?>
+				<?php the_post_navigation(); ?>
 
-		<?php else : ?>
+			<?php else : ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-		<?php endif; ?>
+			<?php endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			</main><!-- #main -->
+		</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+	<?php get_sidebar(); ?>
+	<?php get_footer(); ?>

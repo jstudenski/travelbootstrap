@@ -69,3 +69,12 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	}
 	add_action( 'wp_head', 'travelbootstrap_render_title' );
 endif;
+
+/**
+ * Custom Read More Button
+ */
+function modify_read_more_link() {
+
+	return '<p><a class="more-link btn btn-default" href="' . get_permalink() . '">Read More</a></p>';
+}
+add_filter( 'the_content_more_link', 'modify_read_more_link' );

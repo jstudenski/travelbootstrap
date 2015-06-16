@@ -23,6 +23,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+# Post Meta
 # Word Break
 # Alignments
 # Widgets
@@ -36,6 +37,26 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+Post Meta
+--------------------------------------------------------------*/
+.entry-meta .posted-on {
+	margin-right: 10px;
+}
+
+.posted-on .fa, .byline .fa {
+	color: #bcbcbc;
+}
+
+.posted-on a, .byline a {
+	color: #777;
+	text-decoration: none;
+}
+
+.posted-on a:hover, .byline a:hover {
+	text-decoration: underline;
+}
 
 
 /*--------------------------------------------------------------
@@ -109,29 +130,25 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 ## Posts and pages
 --------------------------------------------------------------*/
 .sticky {
-	display: block;
 }
-
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 0 0 1.8em;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 1.8em;
 }
-
 .byline,
-.updated:not(.published) {
+.updated {
 	display: none;
 }
-
 .single .byline,
 .group-blog .byline {
 	display: inline;
 }
-
 .page-content,
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
 }
-
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -218,7 +235,8 @@ Footer
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
-object {
+object,
+img {
 	max-width: 100%;
 }
 
