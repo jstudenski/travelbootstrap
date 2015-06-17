@@ -7,13 +7,13 @@
  * @package travelbootstrap
  */
 
-if ( ! function_exists( 'the_post_navigation' ) ) :
+if ( ! function_exists( 'bswp_post_navigation' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  *
  * @todo Remove this function when WordPress 4.3 is released.
  */
-function thee_posts_navigation() {
+function bswp_posts_navigation() {
 	// Don't print empty markup if there's only one page.
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 		return;
@@ -37,13 +37,13 @@ function thee_posts_navigation() {
 }
 endif;
 
-if ( ! function_exists( 'the_post_navigation' ) ) :
+if ( ! function_exists( 'bswp_post_navigation' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
  *
  * @todo Remove this function when WordPress 4.3 is released.
  */
-function thee_post_navigation() {
+function bswp_post_navigation() {
 	// Don't print empty markup if there's nowhere to navigate.
 	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 	$next     = get_adjacent_post( false, '', false );
@@ -89,7 +89,7 @@ function travelbootstrap_posted_on() {
 	);
 
 	$byline = sprintf(
-		_x( '<i class="fa fa-user"></i> %s', 'post author', 'bootstrapwp' ),
+		_x( '<i class="fa fa-user"></i> %s', 'post author', 'travelbootstrap' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
