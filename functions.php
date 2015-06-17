@@ -79,17 +79,6 @@ function travelbootstrap_setup() {
 endif; // travelbootstrap_setup
 add_action( 'after_setup_theme', 'travelbootstrap_setup' );
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function travelbootstrap_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'travelbootstrap_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'travelbootstrap_content_width', 0 );
 
 /**
  * Register widget area.
@@ -98,7 +87,7 @@ add_action( 'after_setup_theme', 'travelbootstrap_content_width', 0 );
  */
 function travelbootstrap_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'travelbootstrap' ),
+		'name'          => __( 'Sidebar', 'travelbootstrap' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -108,7 +97,7 @@ function travelbootstrap_widgets_init() {
 	) );
 
 		register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar Left', 'travelbootstrap' ),
+		'name'          => __( 'Sidebar Left', 'travelbootstrap' ),
 		'id'            => 'sidebar-left',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -119,7 +108,6 @@ function travelbootstrap_widgets_init() {
 
 }
 add_action( 'widgets_init', 'travelbootstrap_widgets_init' );
-
 
 /**
  * Enqueue scripts and styles.
