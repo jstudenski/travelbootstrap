@@ -86,7 +86,7 @@ add_action( 'after_setup_theme', 'travelbootstrap_setup' );
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 function travelbootstrap_widgets_init() {
-	register_sidebar( array(
+	  register_sidebar( array(
 		'name'          => __( 'Sidebar', 'travelbootstrap' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
@@ -176,5 +176,10 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 require get_template_directory() . '/inc/bootstrap-walker.php';
 
-
+/**
+ * Custom Post Types
+ */
+require get_template_directory() . '/inc/post-types/CPT.php';
+//Portfolio Custom Post Type
+require get_template_directory() . '/inc/post-types/register-portfolio.php';
 
