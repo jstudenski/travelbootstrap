@@ -40,6 +40,7 @@ function travelbootstrap_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'travelbootstrap' ),
@@ -144,7 +145,6 @@ if ( !function_exists('ie_scripts')) {
   add_action('wp_head', 'ie_scripts');
 
 } // end if
-
 
 /**
  * Implement the Custom Header feature.

@@ -12,14 +12,12 @@ get_header(); ?>
 		<div id="primary" class="col-md-12 col-lg-12">
 			<main id="main" class="site-main" role="main">
 
-				<?php 
-			// the query
-				$the_query = new WP_Query( array('post_type' => 'portfolio') ); ?>
 
-				<?php if ( $the_query->have_posts() ) : ?>
+							<?php if ( have_posts() ) : ?>
 
-					<!-- the loop -->
-					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+								<?php /* Start the Loop */ ?>
+								<?php while ( have_posts() ) : the_post(); ?>
+									
 						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 
 							<div class="portfolio-item">

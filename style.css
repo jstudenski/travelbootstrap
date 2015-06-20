@@ -40,6 +40,32 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+Portfolio
+--------------------------------------------------------------*/
+.portfolio img.wp-post-image {
+    margin-bottom: 0;
+    height: auto;  
+}
+
+.portfolio-item {
+	margin: 10px 0;
+}
+
+.portfolio .thumbnail {
+	margin-bottom: 5px;
+}
+
+.portfolio h4 {
+	margin-top: 5px;
+}
+
+
+.portfolio img {
+    height: 200px; /* or whatever... */
+    overflow: hidden;
+    float: left;
+} 
+/*--------------------------------------------------------------
 Post Meta
 --------------------------------------------------------------*/
 .entry-meta .posted-on {
@@ -172,6 +198,11 @@ Post Meta
 
 .bypostauthor {
 	display: block;
+}
+
+/* Remove uneeded */
+.form-allowed-tags{
+display:none;
 }
 
 /*--------------------------------------------------------------
@@ -347,4 +378,12 @@ Media Queries
 
 }
 
+/*--------------------------------------------------------------
+Bootstrap Override 
+--------------------------------------------------------------*/
+.navbar {
+	height: 50px;
+	border-color: #FF9999;
+	border-width: 0px 0px 5px 0px;
+}
 
