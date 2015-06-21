@@ -17,7 +17,6 @@ get_header(); ?>
 
 		<div id="primary" class="col-md-9 col-lg col-md-push-3">
 
-
 			<main id="main" class="site-main" role="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -32,6 +31,17 @@ get_header(); ?>
 					?>
 
 				<?php endwhile; // End of the loop. ?>
+
+
+<script type="text/javascript">
+visahq_html5widget_color = "454445";
+visahq_html5widget_language = "us";
+visahq_widget_residency_country = "US";
+visahq_html5widget_affiliate_id = "111111";
+visahq_widget_residency_domain = "visahq.com";
+</script>
+<script src="//www.visahq.com/scripts/new/flash_320x100.js" type="text/javascript"></script>
+
 
 			</main><!-- #main -->
 		</div><!-- #primary -->

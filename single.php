@@ -20,16 +20,6 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-<br>
-			<script type="text/javascript">
-visahq_html5widget_color = "454445";
-visahq_html5widget_language = "us";
-visahq_html5widget_destination_country = "<?php the_field('visa_requirements');?>";
-visahq_html5widget_nationality_country = "US";
-visahq_widget_residency_country = "US";
-visahq_widget_residency_domain = "visahq.com";
-</script>
-<script src="//www.visahq.com/scripts/new/flash_320x100.js" type="text/javascript"></script>
 
 
 <?php get_template_part( 'template-parts/content', 'single' ); ?>

@@ -383,7 +383,15 @@ Bootstrap Override
 --------------------------------------------------------------*/
 .navbar {
 	height: 50px;
-	border-color: #FF9999;
-	border-width: 0px 0px 5px 0px;
+	border-color: #ee3440;
+	border-width: 0px 0px 4px 0px;
+	background-color: #3D3D3D;
 }
 
+.thumbnail, .well {
+border-radius: 0px;
+}
+
+.widget-main {
+	height: 20px;
+}
