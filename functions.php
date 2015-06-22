@@ -176,10 +176,12 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 require get_template_directory() . '/inc/bootstrap-walker.php';
 
-/**
- * Custom Post Types
- */
+
+/** Custom Post Types */
 require get_template_directory() . '/inc/post-types/CPT.php';
+
 //Portfolio Custom Post Type
 require get_template_directory() . '/inc/post-types/register-portfolio.php';
 
+//Portfolio Custom Post Type
+require get_template_directory() . '/inc/post-types/register-flight.php';

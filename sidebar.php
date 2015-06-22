@@ -14,6 +14,12 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
   <div class="well">
 	 <?php dynamic_sidebar( 'sidebar-1' ); ?>
   </div><!-- .well -->
+
+<div class="well">
+
+Well 2
+</div><!-- .well -->
+
 </div><!-- #secondary -->
 
 </div><!-- .row -->

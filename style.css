@@ -382,7 +382,7 @@ Media Queries
 Bootstrap Override 
 --------------------------------------------------------------*/
 .navbar {
-	height: 50px;
+	height: 60px;
 	border-color: #ee3440;
 	border-width: 0px 0px 4px 0px;
 	background-color: #3D3D3D;
@@ -392,6 +392,18 @@ Bootstrap Override
 border-radius: 0px;
 }
 
+.thumbnail {
+padding: 0px;
+}
+
 .widget-main {
 	height: 20px;
+}
+
+.btn-xs {
+border-radius: 0px;
+}
+
+#secondary {
+	padding-top: 10px;
 }

@@ -12,10 +12,7 @@ get_header(); ?>
 		<div id="primary" class="col-md-12 col-lg-12">
 			<main id="main" class="site-main" role="main">
 
-				<?php 
-			// the query
-				$the_query = new WP_Query( array('post_type' => 'portfolio') ); ?>
-
+				<?php $the_query = new WP_Query( array('post_type' => array('flight', 'portfolio', 'post') )); ?>
 				<?php if ( $the_query->have_posts() ) : ?>
 
 					<!-- the loop -->

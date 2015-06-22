@@ -18,49 +18,53 @@ get_header(); ?>
 
 		<div id="primary" class="col-md-9 col-lg col-md-push-3">
 
+
 						<main id="main" class="site-main" role="main">
 
-							<?php if ( have_posts() ) : ?>
 
-								<?php /* Start the Loop */ ?>
-								<?php while ( have_posts() ) : the_post(); ?>
+			<?php $the_query = new WP_Query( array('post_type' => array('flight', 'portfolio', 'post') )); ?>
+			<?php if ( $the_query->have_posts() ) : ?>
 
-												<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+				<!-- the loop -->
+				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-				              <div class="portfolio-item">
-				              <div class="thumbnail">
-
-				                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-				                  <?php the_post_thumbnail(); ?>
-				                </a>
-				                    
-				                  <div class="caption">
-				                    <h4><?php the_title(); ?></h4>
-				                    <h6><?php the_field('origin'); ?> to <?php the_field('destination'); ?></h6> 
-
-				                    <span class="badge">$<?php the_field('price_(usd)'); ?></span>
-
-				                    <a href="<?php the_permalink(); ?>" class="btn btn-primary btn-xs">View</a>
-				                  </div>
-				                </div>
-				              </div><!-- end of portfolio item -->
-
-				            </div>
+									<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 
 
-							<?php endwhile; ?>
+					              <div class="portfolio-item">
+					              	<div class="thumbnail">
 
-							<?php bswp_post_navigation(); ?>
+					                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+					                  <?php the_post_thumbnail(); ?>
+					                </a>
+					                    
+					                  <div class="caption">
+					                    <h4><?php the_title(); ?></h4>
+					                    <h6><?php the_field('origin'); ?> to <?php the_field('destination'); ?></h6> 
 
-						<?php else : ?>
+					                    <span class="badge">$<?php the_field('price_(usd)'); ?></span>
 
-							<?php get_template_part( 'template-parts/content', 'none' ); ?>
+					                    <a href="<?php the_permalink(); ?>" class="btn btn-primary btn-xs">View</a>
+					                  </div>
+					                </div>
+					              </div><!-- end of portfolio item -->
 
-						<?php endif; ?>
+			            </div>
 
-						</main><!-- #main -->
+						<?php endwhile; ?>
 
-		</div><!-- #primary -->
+						<?php bswp_post_navigation(); ?>
+
+					<?php else : ?>
+
+						<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+					<?php endif; ?>
+
+
+					</main><!-- #main -->
+
+			</div><!-- #primary -->
 
 
 	<?php get_sidebar(); ?>
